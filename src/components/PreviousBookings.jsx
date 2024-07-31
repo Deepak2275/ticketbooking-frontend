@@ -12,7 +12,7 @@ function PreviousBookings() {
   const [filteredUsers, setFilteredUsers] = useState([]);
   useEffect(() => {
     axios
-      .get("https://ticketbooking-backend-6152.onrender.com/api/auth")
+      .get("https://ticketbooking-backend-irmw.onrender.com/api/auth")
       .then((response) => {
         const data = response.data.data;
 
