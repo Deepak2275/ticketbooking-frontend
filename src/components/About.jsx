@@ -91,6 +91,15 @@ export default function About() {
                   <strong> APIs</strong> are used to retrieve information such
                   as movie and casting details.
                 </p>
+                <p>
+                  Back-end technologies such as
+                  <strong>Node.js, Express.js</strong> 
+                  
+                </p>
+                <p>
+                Database used:
+                  <strong>MongoDB</strong>  
+                </p>
               </MDBModalBody>
               <MDBModalFooter>
                 <button className="close" onClick={toggleShow1}>
@@ -120,21 +129,21 @@ export default function About() {
               <MDBModalBody>
                 <div className="about-div">
                   <p>Created By : </p>
-                  <p>Bhargav Sasi Chandan Arvapalli</p>
+                  <p>Deepak Sankar Pentakota</p>
                 </div>
                 <div className="about-div">
                   <p>Linkedin:</p>
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.linkedin.com/in/bhargav-sasi-chandan-67575a249/"
+                    href="https://www.linkedin.com/in/deepak2275/"
                   >
                     <i class="fa-solid fa-link"></i>
                   </a>
                 </div>
                 <div className="about-div">
                   <p>GitHub :</p>
-                  <a target="_blank" href="https://github.com/Sasichandan01">
+                  <a target="_blank" href="https://github.com/Deepak2275">
                     <i class="fa-solid fa-link"></i>
                   </a>
                 </div>
