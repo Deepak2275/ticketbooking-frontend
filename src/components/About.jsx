@@ -47,7 +47,7 @@ export default function About() {
               </MDBModalHeader>
               <MDBModalBody>
                 <p>
-                  This fksdbksbksfvnkbvkbis the <strong>front-end</strong> website created for
+                  This is the <strong>front-end</strong> website created for
                   booking movie tickets. Payment page is a
                   <strong> static page</strong>.You dont need any money. It does
                   not store old data. If you cannot find an option to move to
