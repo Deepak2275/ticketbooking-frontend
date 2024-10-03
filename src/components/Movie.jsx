@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 
 function Movie(props) {
   
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -21,10 +20,11 @@ function Movie(props) {
           src={`https://image.tmdb.org/t/p/w300/` + props.poster}
           width="250"
           height="300"
+          loading="lazy"
           alt=""
         />
         <figcaption>
-          <button style={{marginBottom:"20px" ,cursor:"text"}}>
+          <button style={{ marginBottom: "20px", cursor: "text" }}>
             <strong>{props.title}</strong>
             <Link
               state={{

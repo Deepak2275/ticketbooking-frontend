@@ -69,7 +69,7 @@ export default function Nav() {
                 {" "}
                 <Link state={{ name: name, mail: mail }} to="/home">
                   <i
-                    class="fa-solid fa-retweet"
+                    className="fa-solid fa-retweet"
                     id="drop"
                     onDoubleClickCapture={toggleShow1}
                   ></i>

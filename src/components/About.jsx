@@ -31,7 +31,6 @@ export default function About() {
           data-tooltip-id="my-tooltip"
           data-tooltip-content="About the website"
           data-tooltip-place="top"
-          
         >
           <button onClick={toggleShow}>
             <i class="fa-solid fa-circle-info"></i>
@@ -47,14 +46,16 @@ export default function About() {
               </MDBModalHeader>
               <MDBModalBody>
                 <p>
-                  This is the <strong>front-end</strong> website created for
+                  This is a <strong>Full-Stack</strong> website created for
                   booking movie tickets. Payment page is a
-                  <strong> static page</strong>.You dont need any money. It does
-                  not store old data. If you cannot find an option to move to
-                  the next page, please ensure that you have selected all the
-                  necessary data on the current page. Once you have selected the
-                  required information, you will be provided with an option to
-                  proceed.
+                  <strong> static page</strong>.You dont need any money. If you
+                  cannot find an option to move to the next page, please ensure
+                  that you have selected all the necessary data on the current
+                  page. Once you have selected the required information, you
+                  will be provided with an option to proceed. After payment is
+                  processed your tickets are booked into our database with user
+                  credentials and respective tickets are shown in their
+                  accounts.
                 </p>
               </MDBModalBody>
               <MDBModalFooter>
@@ -86,19 +87,12 @@ export default function About() {
               <MDBModalBody>
                 <p>
                   Front-end technologies such as
-                  <strong> HTML, CSS, JavaScript </strong> and
-                  <strong> React </strong> to create the user interface.
-                  <strong> APIs </strong> are used to retrieve information such
-                  as movie and casting details.
-                </p>
-                <p>
-                  Back-end technologies such as
-                  <strong> Node.js, Express.js </strong> 
-                  
-                </p>
-                <p>
-                Database used:
-                  <strong> MongoDB </strong>  
+                  <strong>HTML, CSS, JavaScript</strong> and
+                  <strong> React</strong> to create the user interface.
+                  <strong> APIs</strong> are used to retrieve information such
+                  as movie and casting details. Back-end technologies such as
+                  <strong> Node.js, Express.js </strong> are used and connected
+                  to <strong>MongoDB</strong> to strore the tickets of users.
                 </p>
               </MDBModalBody>
               <MDBModalFooter>
@@ -129,21 +123,21 @@ export default function About() {
               <MDBModalBody>
                 <div className="about-div">
                   <p>Created By : </p>
-                  <p>Deepak Sankar Pentakota</p>
+                  <p>Bhargav Sasi Chandan Arvapalli</p>
                 </div>
                 <div className="about-div">
                   <p>Linkedin:</p>
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.linkedin.com/in/deepak2275/"
+                    href="https://www.linkedin.com/in/bhargav-sasi-chandan-67575a249/"
                   >
                     <i class="fa-solid fa-link"></i>
                   </a>
                 </div>
                 <div className="about-div">
                   <p>GitHub :</p>
-                  <a target="_blank" href="https://github.com/Deepak2275">
+                  <a target="_blank" href="https://github.com/Sasichandan01">
                     <i class="fa-solid fa-link"></i>
                   </a>
                 </div>

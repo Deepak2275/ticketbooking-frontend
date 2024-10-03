@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Contact from "./Contact";
 import About from "./About";
 import Ticket from "./Ticket";
@@ -11,7 +10,7 @@ import Success from "./Sucess";
 import Feedback from "./Feedback";
 import Nav from "./Nav";
 import Payment from "./Payment";
-import PreviousBookings from "./PreviousBookings"
+import PreviousBookings from "./PreviousBookings";
 function App() {
   return (
     <>

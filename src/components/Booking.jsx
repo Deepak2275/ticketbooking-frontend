@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {  Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -14,23 +14,20 @@ function Booking(props) {
   const photo = location.state.photo;
   const title = location.state.title;
   const city = location.state.city;
-  const mvedata=location.state.mvedata;
+  const mvedata = location.state.mvedata;
   var c = parseInt(cost);
 
   const [count, setCount] = useState([0, false]);
   const [activeb, setactiveb] = useState(null);
- 
 
   var timings = [
-    { value: "11", name: "11:00 A.M" },
-    { value: "14", name: "2:00 P.M" },
-    { value: "17", name: "5:00 P.M" },
-    { value: "20", name: "8:00 P.M" },
-    { value: "24", name: "10:00 P.M" },
+    { value: "11", name: "11:00 " },
+    { value: "14", name: "14:00 " },
+    { value: "17", name: "17:00 " },
+    { value: "20", name: "20:00 " },
+    { value: "24", name: "22:00 " },
   ];
 
- 
-  
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -74,6 +71,7 @@ function Booking(props) {
         {timings.map((data) => (
           <button
             type="button"
+            key={data.name}
             name={data.name}
             value={data.value}
             id={activeb === data.name ? "timebuttonid" : "timebutton"}
@@ -90,7 +88,7 @@ function Booking(props) {
           </p>
           <ul className="showcase" data-aos="fade-out">
             <li>
-              <div id="seat" className="seat"></div>
+              <div id="seat" className="seat2"></div>
               <small className="status">Available</small>
             </li>
             <li>

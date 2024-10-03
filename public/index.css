@@ -110,148 +110,6 @@ a {
   border-right-style: none;
   border-right-width: medium;
 }
-/* PreviousBookings */
-
-.prevbook{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-style: italic;
-  width: 40%;
-  text-align: center;
-  margin:auto;
-  padding-top:10px;
-  padding-bottom: 10px;
-  padding-left: 60px;
-  padding-right: 60px;
-  border:1px solid black;
-  margin-top: 50px;;
-}
-.prevtable{
-  
-  margin-left: auto;
-  margin-right: auto;
-  margin-top:5%;
-  width: fit-content;
-}
-
-.prevbookdata{
-  display: flex;
-  font-family: "League Spartan", sans-serif;
-  padding-top:10px;
-  padding-bottom: 10px;
-  padding-left: 30px;
-  padding-right: 30px;;
-  margin:auto;
-  border: 1px solid black;
-  margin-bottom:20px;
-  border-radius: 20px;;
-}
-
-.prevbookdataimg{
-  height:150px;
-  width:130px;
-  margin:50px 20px 50px 20px;
-  border-radius: 10px;
-}
-
-.prevbookdetails{
-  width:100%;
-  padding-right: 20px;
-  margin:50px 0px 50px 20px;
-}
-
-
-
-/* Navbar */
-
-.container-fluid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-left: 0;
-}
-.navbar {
-  background-color: hsl(233, 15%, 24%);
-  width: 100%;
-  height: 80px;
-}
-
-.navbar-brand {
-  margin-left: 88px;
-}
-@media only screen and (max-width: 1000px) {
-  .navbar-brand {
-    margin-left: 0;
-  }
-  .navbar {
-    height: fit-content;
-  }
-  .navbar-nav {
-    width: 100px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.data-container {
-  background-color: #fff;
-
-  border-radius: 5px;
-  font-size: 14px;
-  margin: 0 30px 0 10px;
-  padding: 5px 15px 5px 15px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.data-container Link {
-  color: #4298e7;
-}
-#drop {
-  cursor: pointer;
-  margin-left: 10px;
-  color: black !important;
-
-  padding: 2px;
-}
-
-.circle {
-  border: none;
-  background-color: hsl(233, 15%, 24%);
-}
-.close {
-  border: none;
-  border-radius: 10px;
-  color: #4298e7;
-}
-.gfg {
-  display: flex;
-  flex-wrap: wrap;
-}
-.gfg-content {
-  display: block;
-  margin: auto;
-}
-.gfg-details {
-  display: flex;
-  flex-wrap: wrap;
-}
-.gfg-details button {
-  border: 0.5px;
-  
-}
-.gfg-details1 button {
-  border: 0.5px;
-  margin-bottom: 5px;
-}
-.gfg-details button:hover {
-  transform: scale(1.05);
-  text-transform: uppercase;
-}
-@media only screen and (max-width: 1000px) {
-  .gfg-content img {
-    margin-bottom: 20px;
-  }
-}
 /* City */
 
 .city-form {
@@ -358,6 +216,193 @@ a {
   flex-wrap: wrap;
 }
 
+/* Navbar */
+
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 0;
+}
+.navbar {
+  background-color: hsl(233, 15%, 24%);
+  width: 100%;
+  height: 80px;
+}
+
+.navbar-brand {
+  margin-left: 88px;
+}
+@media only screen and (max-width: 1000px) {
+  .navbar-brand {
+    margin-left: 0;
+  }
+  .navbar {
+    height: fit-content;
+  }
+  .navbar-nav {
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.data-container {
+  background-color: #fff;
+
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 0 30px 0 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.data-container Link {
+  color: #4298e7;
+}
+#drop {
+  cursor: pointer;
+  margin-left: 10px;
+  color: black !important;
+
+  padding: 2px;
+}
+
+.circle {
+  border: none;
+  background-color: hsl(233, 15%, 24%);
+}
+.close {
+  border: none;
+  border-radius: 10px;
+  color: #4298e7;
+}
+.gfg {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gfg-content {
+  display: block;
+  margin: auto;
+}
+.gfg-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gfg-details button {
+  border: 0.5px;
+}
+.gfg-details1 button {
+  border: 0.5px;
+  margin-bottom: 5px;
+}
+.gfg-details button:hover {
+  transform: scale(1.05);
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1000px) {
+  .gfg-content img {
+    margin-bottom: 20px;
+  }
+}
+
+/* PreviousBookings */
+
+.prevbook {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border: 1px solid black;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.prevtable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: fit-content;
+}
+.prevbookitems {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: flex-end;
+}
+.prevbookdata {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
+  margin: auto;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.prevbookdatain {
+  display: flex;
+  font-family: "Encode Sans SC", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 30px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.prevbookdataimg {
+  height: 170px;
+  width: 170px;
+  margin: 30px 20px 30px 0px;
+  border-radius: 10px;
+}
+
+.prevbookdetails {
+  width: 100%;
+  padding-right: 20px;
+  margin: 30px 0px 30px 20px;
+}
+.deleteticket {
+  border-radius: 5px;
+  border: 1px solid black;
+  border-radius: 5%;
+  height: fit-content;
+  padding: 2%;
+  background-color: #44f8d8;
+}
+.rateticket {
+  display: flex;
+  flex-direction: row;
+
+  border: 1px solid black;
+  border-radius: 5%;
+  height: fit-content;
+  padding: 2%;
+  background-color: #44f8d8;
+}
+.rateticket p {
+  margin-bottom: 0px;
+  color: #f84464;
+}
+.modalyes {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid;
+  border-radius: 5%;
+  text-transform: uppercase;
+  background-color: #1abc9c;
+}
+.textarea1 {
+  display: flex;
+  columns: 50;
+  margin: 50px auto;
+  border: 1px solid black;
+}
 /* Home Page */
 
 .latestmovies {
@@ -378,13 +423,10 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-
   width: 100%;
-
   background-color: #fcfcfc;
   margin: 2% 10% 10% 10%;
   padding: 0 100px;
-
   gap: 64px;
   flex-wrap: wrap;
   margin-inline: auto;
@@ -404,30 +446,12 @@ figure {
 figure:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-figure:hover h1 {
-  opacity: 0;
-  transform: scale(0.7);
-}
 figure:hover img {
   transform: scale(1.025);
   cursor: pointer;
 }
 figure:hover figcaption {
   bottom: 0;
-}
-figure h1 {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-size: 60px;
-  font-weight: 100;
-  line-height: 1;
-  opacity: 1;
-
-  transition: 0.25s ease;
 }
 figure img {
   width: 250px;
@@ -436,19 +460,17 @@ figure img {
 }
 figure figcaption {
   position: absolute;
-  bottom: -100%;
+  bottom:-100%;
   left: 0;
   width: 100%;
   margin: 0;
   padding: 20px 30px;
   background-color: #1f2533;
-
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   color: white;
   line-height: 1;
   transition: 0.25s;
 }
-
 figure figcaption p {
   font-size: 14px;
   line-height: 1.75;
@@ -479,13 +501,10 @@ figure figcaption button i:hover {
   width: 400px;
   cursor: pointer;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
-
   transition: all 0.2s ease-in-out;
 }
-
 .movie-image:hover {
   transform: scale(1.001);
-
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -493,7 +512,6 @@ figure figcaption button i:hover {
 
 figure figcaption1 {
   position: absolute;
-
   left: 0;
   width: 100%;
   margin: 0;
@@ -528,7 +546,6 @@ figure:hover figcaption1 {
 .videodata:hover {
   border: 0px;
 }
-
 .videodatabutton {
   border: none;
   background-color: #fff;
@@ -564,7 +581,6 @@ figure:hover figcaption1 {
 .abcd {
   display: block;
 }
-
 .poster {
   margin-top: 100px;
   margin-right: 30px;
@@ -573,7 +589,6 @@ figure:hover figcaption1 {
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 }
-
 .matter {
   margin-left: 30px;
   margin-top: 100px;
@@ -601,7 +616,6 @@ figure:hover figcaption1 {
 .abcd {
   margin-bottom: 0;
 }
-
 .elements {
   display: flex;
   margin-top: 20px;
@@ -668,7 +682,7 @@ li {
   height: 40px;
 }
 
-.carousell{
+.carousell {
   overflow: hidden;
 }
 .plotdata {
@@ -685,10 +699,10 @@ li {
   .plot {
     margin-left: 30px;
   }
-  .carousell{
-    margin-left: 10px;;
-    margin-right:10px;
-}
+  .carousell {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 .plot h4 {
   font-family: "Encode Sans SC", sans-serif;
@@ -823,9 +837,9 @@ li {
   border: 1px solid black;
   overflow: scroll;
 }
-@media only screen and (max-width:500px){
-  .reviewdata1{
-    width:auto
+@media only screen and (max-width: 500px) {
+  .reviewdata1 {
+    width: auto;
   }
 }
 ::-webkit-scrollbar {
@@ -866,17 +880,16 @@ li {
   overflow-x: auto;
 }
 @media only screen and(max-width:500px) {
-  
-  .videoplayer{
+  .videoplayer {
     height: 200px !important;
-    width:300px !important;
+    width: 300px !important;
     overflow: hidden;
   }
-  .video-name{
+  .video-name {
     height: 250px !important;
-    width:300px !important;
+    width: 300px !important;
   }
-  
+
   #youtube {
     padding: 0;
   }
@@ -967,6 +980,16 @@ button {
 }
 
 .seat {
+  height: 18px;
+  width: 20px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid black;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+.seat2 {
   height: 18px;
   width: 20px;
   margin: 5px;

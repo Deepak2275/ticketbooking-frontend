@@ -9,7 +9,6 @@ function Ticket() {
   const img_300 = "https://image.tmdb.org/t/p/w300";
 
   const location = useLocation();
-
   const name = location.state.name;
   const mvedata = location.state.data;
   const title = location.state.title;
@@ -22,16 +21,19 @@ function Ticket() {
       id: 0,
       name: "button-1",
       date: moment().add(1, "days").format("ddd, D MMM"),
+      date1: moment().add(1, "days").format("ddd, D MMM,YYYY"),
     },
     {
       id: 1,
       name: "button-2",
       date: moment().add(2, "days").format("ddd, D MMM"),
+      date1: moment().add(2, "days").format("ddd, D MMM,YYYY"),
     },
     {
       id: 2,
       name: "button-3",
       date: moment().add(3, "days").format("ddd, D MMM"),
+      date1: moment().add(3, "days").format("ddd, D MMM,YYYY"),
     },
   ];
 
@@ -50,13 +52,9 @@ function Ticket() {
 
   const [movie, setmovieData] = useState([]);
   const [cost, setCost] = useState(null);
-  // eslint-disable-next-line no-unused-vars
-  const [found, setNotFound] = useState(null);
   const [credits, setCredits] = useState(null);
   const [activebutton, setactive] = useState(null);
   const [activeb, setactiveb] = useState(null);
-  const [trailer, setTrailer] = useState(null);
-  const [review, setReview] = useState(null);
 
   function handlecost(data) {
     setCost(data);
@@ -76,11 +74,11 @@ function Ticket() {
       .then((data) => setmovieData(data))
 
       .catch((err) => {
-        setNotFound(true);
+        console.log(err);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
- 
+
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/${mvedata.id}/credits?api_key=bee8ce9f0d5a33ee50837d31a61a64eb`
@@ -89,33 +87,9 @@ function Ticket() {
       .then((data) => setCredits(data.cast))
 
       .catch((err) => {
-        setNotFound(true);
+         console.log(err);
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${mvedata.id}/videos?api_key=bee8ce9f0d5a33ee50837d31a61a64eb`
-    )
-      .then((res) => res.json())
-      .then((data) => setTrailer(data.results))
-
-      .catch((err) => {
-        setNotFound(true);
-      });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${mvedata.id}/reviews?api_key=bee8ce9f0d5a33ee50837d31a61a64eb`
-    )
-      .then((res) => res.json())
-      .then((data) => setReview(data.results))
-
-      .catch((err) => {
-        setNotFound(true);
-      });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -127,7 +101,7 @@ function Ticket() {
   if (credits !== null) {
     credit = credits.slice(0, 6);
   }
-  
+
   var num = 0;
 
   if (movie.imdbVotes !== undefined) {
@@ -137,8 +111,9 @@ function Ticket() {
       }
     }
   }
+
   var imdb = "N/A";
-  var num3 = parseInt(mvedata.vote_average); 
+  var num3 = parseInt(mvedata.vote_average);
   imdb = movie.imdbRating === "N/A" ? num3 : movie.imdbRating;
   var num1 = parseInt(num);
   num1 = num1 / 1000;
@@ -168,11 +143,8 @@ function Ticket() {
                 className="movie-image"
                 src={`https://image.tmdb.org/t/p/w500/` + mvedata.poster_path}
               />
-              
             </figure>
           </div>
-          
-         
           <div className="matter">
             <h1 className="matter-title">{title} </h1>
 
@@ -232,9 +204,9 @@ function Ticket() {
                   type="button"
                   name={data.date}
                   id={
-                    activebutton === data.date ? "datebuttonid" : "datebutton"
+                    activebutton === data.date1 ? "datebuttonid" : "datebutton"
                   }
-                  onClick={() => dateclick(data.date)}
+                  onClick={() => dateclick(data.date1)}
                 >
                   {data.date}
                 </button>
@@ -350,7 +322,8 @@ function Ticket() {
                     <div className="a1234">
                       <a
                         href={`https://en.wikipedia.org/wiki/${c?.name}`}
-                        target="_blank" rel="noreferrer"
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         <button className="castbutton">
                           <i class="fa-brands fa-wikipedia-w"></i>
@@ -361,7 +334,8 @@ function Ticket() {
                     <div className="a1234">
                       <a
                         href={`https://www.google.com/search?q=${c?.name}`}
-                        target="_blank" rel="noreferrer"
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         <button className="castbutton">
                           <i class="fa-brands fa-google"></i>
@@ -372,12 +346,19 @@ function Ticket() {
                 </div>
 
                 <div>
-                  <p style={{ marginTop: "10px",width:"150px",overflow:"hidden"}}>{c?.name}</p>
+                  <p
+                    style={{
+                      marginTop: "10px",
+                      width: "150px",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {c?.name}
+                  </p>
                 </div>
               </div>
             ))}
         </div>
-       
       </div>
       <div className="plot">
         <h4>
@@ -403,7 +384,8 @@ function Ticket() {
             <div className="a1234">
               <a
                 href={`https://en.wikipedia.org/wiki/${movie.Director}`}
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 <button className="castbutton">
                   <i class="fa-brands fa-wikipedia-w"></i>
@@ -414,7 +396,8 @@ function Ticket() {
             <div className="a1234">
               <a
                 href={`https://www.google.com/search?q=${movie.Director}`}
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 <button className="castbutton">
                   <i class="fa-brands fa-google"></i>
@@ -425,11 +408,9 @@ function Ticket() {
         </div>
         <p style={{ marginTop: "10px" }}>{movie.Director}</p>
       </div>
-      
-       
-        <Reviews reviews={review} />
-        <Trailer videos={trailer}/>
-      
+
+      <Reviews id={mvedata.id} />
+      <Trailer id={mvedata.id} />
     </>
   );
 }

@@ -7,16 +7,13 @@ export default function Ticket() {
 
   const name = location.state.name;
   const mail = location.state.mail;
-
   const [city, setCity] = React.useState("");
-  
   function click(event) {
     setCity(event.target.value);
   }
 
   return (
     <>
-      
       <div className="city">
         <div className="city-form">
           <h2>Select a city:</h2>

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 function Sucess() {
@@ -20,13 +20,16 @@ function Sucess() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
- 
-  const getRan= size => [...Array(size)].map(()=> Math.floor(Math.random()*16).toString(16)).join('');
-  const num=getRan(6);
-  
+
+  const getRan = (size) =>
+    [...Array(size)]
+      .map(() => Math.floor(Math.random() * 16).toString(16))
+      .join("");
+  const num = getRan(6);
+
   const [centredModal, setCentredModal] = useState(false);
   const [centredModal1, setCentredModal1] = useState(false);
-  
+
   const toggleShow = () => setCentredModal(!centredModal);
   const toggleShow1 = () => setCentredModal1(!centredModal1);
   return (
@@ -66,7 +69,6 @@ function Sucess() {
             <p>Booking id:</p>
             <p> #{num}</p>
           </div>
-
           <div className="success-details">
             <p>Movie Name :</p>
             <p>{title}</p>
@@ -77,7 +79,7 @@ function Sucess() {
           </div>
           <div className="success-details">
             <p>Total Cost :</p>
-            <p>{cost+10}/-</p>
+            <p>{cost + 10}/-</p>
           </div>
           <div className="success-details">
             <p>Theatre :</p>

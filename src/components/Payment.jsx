@@ -19,6 +19,8 @@ import {
 } from "mdb-react-ui-kit";
 
 function Payment() {
+  const localhost = "http://localhost:5000/api/auth";
+  const backend = "https://ticketbooking-backend-6152.onrender.com/api/auth";
   const location = useLocation();
 
   const cost = location.state.totalcost;
@@ -32,7 +34,6 @@ function Payment() {
   const mail = location.state.mail;
   const city = location.state.city;
 
-
   const [activeb, setactiveb] = useState(null);
   const [app, setApp] = useState(null);
   const [centredModal, setCentredModal] = useState(false);
@@ -43,7 +44,7 @@ function Payment() {
   const toaster = useRef();
   var num = cost / count;
   var num1 = cost + 10;
-
+  const review = "@" + name + "'s review";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -51,9 +52,7 @@ function Payment() {
   function handleselect(data) {
     setactiveb(data);
   }
-     const removeToast =()=> {
-       addToast(0);
-     };
+
   const details = {
     name,
     mail,
@@ -64,27 +63,24 @@ function Payment() {
     city,
     count,
     cost,
-    theater
+    theater,
+    review,
   };
   const handlepayment = async () => {
     addToast(exampleToast);
-    setCentredModal(!centredModal)
-    
+    setCentredModal(!centredModal);
+
     try {
-      const response = await fetch(
-        `https://ticketbooking-backend-irmw.onrender.com/api/auth/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(details),
-        }
-      );
-      
+      const response = await fetch(`${backend}/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(details),
+      });
+
       addToast(0);
       setCentredModal1(!centredModal1);
-
     } catch (err) {
       console.log(err);
     }
@@ -295,7 +291,7 @@ function Payment() {
         </MDBModal>
 
         <MDBModal
-          backdrop={false}
+          
           tabIndex="-1"
           show={centredModal1}
           setShow={setCentredModal1}
@@ -333,6 +329,7 @@ function Payment() {
                               mail: mail,
                               city: city,
                               number: number,
+                              review: review,
                             }}
                             to="success"
                           >

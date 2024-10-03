@@ -20,7 +20,7 @@ function PreviousBookings() {
   const name = location.state.name;
   const mail = location.state.mail;
   const localhost = "http://localhost:5000/api/auth";
-  const backend = "https://ticketbooking-backend-irmw.onrender.com/api/auth";
+  const backend = "https://ticketbooking-backend-6152.onrender.com/api/auth";
   const today = moment().format("YYYY-MM-DDTHH:mm:ss.SSS[Z]");
   const [review, setreview] = useState("Review: ");
   const [users, setUsers] = useState([]);
