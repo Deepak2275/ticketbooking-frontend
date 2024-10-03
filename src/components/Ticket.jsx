@@ -138,7 +138,7 @@ function Ticket() {
     }
   }
   var imdb = "N/A";
-  var num3 = parseInt(mvedata.vote_average);
+  var num3 = parseInt(mvedata.vote_average); 
   imdb = movie.imdbRating === "N/A" ? num3 : movie.imdbRating;
   var num1 = parseInt(num);
   num1 = num1 / 1000;

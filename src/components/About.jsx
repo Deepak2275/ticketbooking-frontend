@@ -86,19 +86,19 @@ export default function About() {
               <MDBModalBody>
                 <p>
                   Front-end technologies such as
-                  <strong>HTML, CSS, JavaScript</strong> and
-                  <strong> React</strong> to create the user interface.
-                  <strong> APIs</strong> are used to retrieve information such
+                  <strong> HTML, CSS, JavaScript </strong> and
+                  <strong> React </strong> to create the user interface.
+                  <strong> APIs </strong> are used to retrieve information such
                   as movie and casting details.
                 </p>
                 <p>
                   Back-end technologies such as
-                  <strong>Node.js, Express.js</strong> 
+                  <strong> Node.js, Express.js </strong> 
                   
                 </p>
                 <p>
                 Database used:
-                  <strong>MongoDB</strong>  
+                  <strong> MongoDB </strong>  
                 </p>
               </MDBModalBody>
               <MDBModalFooter>
